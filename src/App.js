@@ -1,11 +1,11 @@
+import Main from "./components/Main";
 
-
-const App=()=> {
+const App = () => {
   return (
-    <div >
-
+    <div>
+      <Main />
     </div>
   );
-}
+};
 
 export default App;
