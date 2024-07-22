@@ -18,7 +18,7 @@ const ImageGallery = () => {
             src={image}
             alt={`Image ${index + 1}`}
             key={index}
-            className="w-full  w-[28rem] sm:w-[28rem] md:w-[16rem] lg:w-[22rem] object-cover mr-4 h-[15rem] rounded-lg"
+            className="w-full  w-[28rem] sm:w-[28rem] md:w-[16rem] lg:w-[22rem] object-cover mr-1 sm:mr-4 mb-4 h-[15rem] rounded-lg"
           />
         ))}
       </div>
@@ -30,7 +30,7 @@ const ImageGallery = () => {
             src={image}
             alt={`Image ${index + 4}`}
             key={index + 3}
-            className="w-full w-[28rem] sm:w-[28rem] md:w-[16rem] lg:w-[22rem] object-cover mr-4 h-[15rem] rounded-lg"
+            className="w-full w-[28rem] sm:w-[28rem] md:w-[16rem] lg:w-[22rem] object-cover mr-4 mb-4 h-[15rem] rounded-lg"
           />
         ))}
       </div>
