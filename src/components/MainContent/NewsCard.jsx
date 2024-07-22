@@ -9,7 +9,7 @@ import image5 from "../../assets/NewsSidebarImage/image5.jpg";
 const NewsCard = () => {
   return (
     <div className="flex flex-col items-center justify-center p-6 shadow-lg w-[22rem] rounded-lg max-w-md mx-auto my-10 bg-gray-600 text-white h-[85rem]">
-      <h2 className="text-3xl font-bold mb-4 -mt-[30rem]">خبر</h2>
+      <h2 className="text-3xl font-bold mb-4 -mt-[30rem] md:-mt-[32rem]">خبر</h2>
       <h3 className="text-xl font-bold mb-4">آخرین خبرهای فرمول یک</h3>
       <div className="inline-block w-[19rem] min-w-[4em] h-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50 mb-7"></div>
       <img src={image7} alt="" className="w-full h-64 object-cover mb-4" />
