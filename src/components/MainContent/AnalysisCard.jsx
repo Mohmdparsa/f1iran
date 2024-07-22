@@ -10,7 +10,7 @@ const AnalysisCard = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center p-6 shadow-lg w-[22rem] rounded-lg max-w-md mx-auto my-10 bg-gray-200 text-black">
-        <h2 className="text-3xl font-bold mb-14 -mt-[1rem]">ایستگاه تحلیل</h2>
+        <h2 className="text-3xl font-bold mb-14 -mt-[1rem] md:mt-7">ایستگاه تحلیل</h2>
         <div className="inline-block w-[19rem] min-w-[4em] h-0.5 self-stretch  opacity-100 dark:opacity-50 mb-7 bg-black"></div>
         <img src={image6} alt="" className="w-full h-64 object-cover mb-4" />
         <div className="flex mb-8">
