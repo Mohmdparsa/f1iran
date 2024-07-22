@@ -6,12 +6,10 @@ import image4 from "../assets/image4.jpeg";
 import image5 from "../assets/image5.jpg";
 
 const ImageGallery = () => {
-  // Array of image sources
   const images = [image1, image2, image3, image4, image5];
 
   return (
     <div className="flex flex-wrap justify-center items-start p-4">
-      {/* Top row for larger images */}
       <div className="flex flex-col md:flex-row justify-center items-start w-full mb-8">
         {images.slice(0, 3).map((image, index) => (
           <img
@@ -23,7 +21,6 @@ const ImageGallery = () => {
         ))}
       </div>
 
-      {/* Bottom row for smaller images */}
       <div className="flex flex-wrap justify-center items-start w-full">
         {images.slice(3).map((image, index) => (
           <img
@@ -39,4 +36,3 @@ const ImageGallery = () => {
 };
 
 export default ImageGallery;
-
