@@ -8,7 +8,11 @@ const Main = () => {
       <Header />
       <ImageGallery />
       <Sidebars />
-      <img src={telegram} alt="" className="mr-[5rem]" />
+      <img
+        src={telegram}
+        alt=""
+        className="mr-[1rem] md:mr-[4rem]  rounded-xl w-[28rem] sm:w-[33rem] md:w-[40rem] lg:w-[45rem]"
+      />
     </>
   );
 };
