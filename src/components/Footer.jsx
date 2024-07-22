@@ -11,7 +11,7 @@ const Footer = () => {
           <p className="mt-2">حق نشر © 2015 – 2022 فرمول یک ایران</p>
         </div>
         <div className="border-t border-gray-700 py-4 text-center mt-[3rem]">
-          <nav className="space-x-10 mt-4  ">
+          <nav className="space-x-10 -mt-3">
             <a href="#" className="ml-10 hover:text-orange-500">
               ثبت نام
             </a>
