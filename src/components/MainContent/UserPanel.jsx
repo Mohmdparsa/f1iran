@@ -6,8 +6,8 @@ const UserPanel = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center p-6  w-[22rem] rounded-lg max-w-md mx-auto my-10 bg-white text-white ">
-        <div className="flex flex-col items-center justify-center  bg-orange-yellow-gradient text-white font-bold text-xl w-[21rem] rounded-lg h-[10rem] -mt-[14rem]">
-          <h1 className="text-lg mb-4">فرمول یک ایران را دنبال کنید</h1>
+        <div className="flex flex-col items-center justify-center  bg-orange-yellow-gradient text-white font-bold text-xl w-[21rem] rounded-lg h-[10rem] -mt-[14rem] md:mt-[4rem]">
+          <h1 className="text-lg mb-4 ">فرمول یک ایران را دنبال کنید</h1>
           <div className="flex space-x-5 ">
             <a href="#" style={{ marginLeft: "17px" }}>
               <FaInstagram className="h-[3rem] w-[3rem]" />
