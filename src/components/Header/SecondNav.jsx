@@ -1,16 +1,32 @@
-import React from "react";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
-import { IoHomeOutline } from "react-icons/io5";
-import { IoCarSportOutline } from "react-icons/io5";
 import { MdOutlineSportsMotorsports } from "react-icons/md";
 import { PiFlagBannerFoldThin } from "react-icons/pi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FiPhone } from "react-icons/fi";
-import { IoEnterOutline } from "react-icons/io5";
-import { IoPersonOutline } from "react-icons/io5";
+import {
+  IoPersonOutline,
+  IoEnterOutline,
+  IoCarSportOutline,
+  IoHomeOutline,
+} from "react-icons/io5";
+import { useState, useEffect } from "react";
 
 const SecondNav = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleResize = () => {
+    const breakpoint = 900;
+    if (window.innerWidth > breakpoint) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <nav className="bg-black text-white p-4" dir="rtl">
@@ -91,49 +107,46 @@ const SecondNav = () => {
           </a>
         </div>
 
-        {/* Search Icon */}
-        <div className="flex items-center">
+        <div className="flex items-center md:dir-ltr">
           <button className="text-white focus:outline-none">
             <FaSearch />
           </button>
         </div>
 
-        {/* Hamburger Menu (Mobile View) */}
-        <div className="lg:hidden">
+        <div className="lg:hidden lg:flex space-x-11 md:dir-ltr">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="focus:outline-none"
           >
-            {isOpen ? <FaTimes/> : <FaBars />}
+            {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
-        {/* Mobile Links */}
         {isOpen && (
-          <div className="mt-2 py-2 space-y-2">
+          <div className="absolute top-0 inset-x-0 mt-[12rem] bg-black text-white p-4 space-y-2">
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> خانه</span>
+              <span style={{ fontWeight: "bold" }}> خانه</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> ماشین ها</span>
+              <span style={{ fontWeight: "bold" }}> ماشین ها</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> موتور اسپورت</span>
+              <span style={{ fontWeight: "bold" }}> موتور اسپورت</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> فرمول یک</span>
+              <span style={{ fontWeight: "bold" }}> فرمول یک</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}>فروشگاه</span>
+              <span style={{ fontWeight: "bold" }}>فروشگاه</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> تماس</span>
+              <span style={{ fontWeight: "bold" }}> تماس</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> ثبت نام</span>
+              <span style={{ fontWeight: "bold" }}> ثبت نام</span>
             </a>
             <a href="#" className="block px-4 py-2 hover:bg-gray-700">
-            <span style={{ fontWeight: "bold" }}> ورود</span>
+              <span style={{ fontWeight: "bold" }}> ورود</span>
             </a>
           </div>
         )}
